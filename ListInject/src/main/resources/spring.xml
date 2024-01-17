@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id = "list" class = "com.sagarr.ListInject">
+        <constructor-arg value = "1"></constructor-arg>
+        <constructor-arg value = "Sagar"></constructor-arg>
+        <constructor-arg>
+           <list>
+              <value>Answer1</value>
+              <value>Answer2</value>
+              <value>Answer3</value>
+           </list>
+        </constructor-arg>
+   </bean>
+
+</beans>
