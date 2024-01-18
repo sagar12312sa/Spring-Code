@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+">
+    <bean id = "answer1" class = "com.tap.Answer">
+        <constructor-arg value = "1"> </constructor-arg> 
+        <constructor-arg value = "sagar"></constructor-arg>      
+        <constructor-arg value = "30/09/2001"></constructor-arg>
+    </bean>
+    
+    <bean id = "answer2" class = "com.tap.Answer">
+        <constructor-arg value = "2"> </constructor-arg> 
+        <constructor-arg value = "Rohit"></constructor-arg>      
+        <constructor-arg value = "30/01/2001"></constructor-arg>
+    </bean>
+    
+    <bean id = "user1" class = "com.tap.User">
+        <constructor-arg value = "1"> </constructor-arg> 
+        <constructor-arg value = "sagar"></constructor-arg>      
+        <constructor-arg value = "sagar@gmail.com"></constructor-arg>
+    </bean>
+    
+    <bean id = "user2" class = "com.tap.User">
+        <constructor-arg value = "2"> </constructor-arg> 
+        <constructor-arg value = "Rohit"></constructor-arg>      
+        <constructor-arg value = "rohit@gmail.com"></constructor-arg>
+    </bean>
+    
+    <bean id = "question" class = "com.tap.Question">
+        <constructor-arg value = "1"></constructor-arg>
+        <constructor-arg value = "Java"></constructor-arg>
+        <constructor-arg>
+            <map>
+               <entry key-ref = "answer1" value-ref = "user1"></entry>
+               <entry key-ref="answer2" value-ref="user2"></entry>
+            </map>
+        </constructor-arg>
+    </bean>
+</beans>
