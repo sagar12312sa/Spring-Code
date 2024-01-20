@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *
  * @author sagar
  */
-public class Test {
+public class Pcname {
     public static void  main(String[] args){
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Employee employee = (Employee)context.getBean("employee");
